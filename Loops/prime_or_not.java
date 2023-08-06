@@ -8,24 +8,28 @@ public class prime_or_not {
         int number = sc.nextInt();
         boolean isprime = true;
 
-        for(int i=2; i<=Math.sqrt(number); i++){
 
-            if(number==2){
-                // it's not necessary to write the below line because the value of isprime is already initialized to true.
-                isprime=true;
-            }
+        if(number==1){
+            isprime=false;
+        }
 
-            else{
+        else if(number==2){
+            // isprime=true;
+        }
+
+        else{
+
+            for(int i=2; i<=Math.sqrt(number); i++){
 
                 if(number%i == 0){
                     isprime=false;
-                    break;
                 }
 
             }
 
         }
 
+        
         if(isprime==true){
             System.out.print("The entered number is a prime number.");
         }
@@ -33,6 +37,8 @@ public class prime_or_not {
         else{
             System.out.println("The entered number is not a prime number.");
         }
+
+        
     }
     
 }
