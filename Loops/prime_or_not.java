@@ -22,9 +22,6 @@ public class prime_or_not {
                     break;
                 }
 
-                else{
-                    isprime=true;
-                }
             }
 
         }
